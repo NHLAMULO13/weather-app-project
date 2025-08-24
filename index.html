@@ -3,31 +3,47 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Document</title>
   </head>
   <body>
-    <header>
-      <form>
-        <input type="search" placeholder="Enter a city" required />
-        <input type="submit" value="search" />
-      </form>
-    </header>
-    <main>
-      <div>
-        <h1>Pretoria</h1>
-        <p>
-          Tuesday 14:49, scattered clouds
-          <br />
-          Humidity: 66%, wind: 3.3km/h
-        </p>
-      </div>
-      <div>🌤 12°</div>
-    </main>
+    <div class="cover">
+      <header>
+        <form>
+          <input
+            type="search"
+            placeholder="Enter a city"
+            required
+            class="searchBar"
+          />
+          <input type="submit" value="search" class="searchButton" />
+        </form>
+      </header>
+      <main>
+        <div class="weather-data">
+          <div>
+            <h1 class="city-weather">Pretoria</h1>
+            <p class="weather-details">
+              Tuesday 14:49, scattered clouds
+              <br />
+              Humidity: <strong>66%</strong>, wind: <strong>3.3km/h</strong>
+            </p>
+          </div>
+          <div class="temperature-container">
+            <div class="weather-icon">🌤</div>
+            <div class="degrees">12</div>
+            <div class="unit">°C</div>
+          </div>
+        </div>
+      </main>
 
-    <footer>
-      <a href=""></a>
-      <a href=""></a>
-      <a href=""></a>
-    </footer>
+      <footer>
+        <p>
+          This project was coded by <a href="">Nhlamulo Nyalungu</a> is
+          <a href=""> open-sourced on Github</a> and
+          <a href="">hosted on Netlify</a>
+        </p>
+      </footer>
+    </div>
   </body>
 </html>
