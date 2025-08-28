@@ -4,17 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
+
     <title>Document</title>
   </head>
   <body>
     <div class="cover">
       <header>
-        <form>
+        <form id="search-form">
           <input
             type="search"
             placeholder="Enter a city"
             required
             class="searchBar"
+            id="search-input"
           />
           <input type="submit" value="search" class="searchButton" />
         </form>
@@ -22,16 +25,20 @@
       <main>
         <div class="weather-data">
           <div>
-            <h1 class="city-weather">Pretoria</h1>
+            <h1 class="city-weather" id="city-weather">Pretoria</h1>
             <p class="weather-details">
-              Tuesday 14:49, scattered clouds
+              <strong class="weekdayTime"></strong>
+              <span id="time"></span> ,
+              <span id="description"></span>
+
               <br />
-              Humidity: <strong>66%</strong>, wind: <strong>3.3km/h</strong>
+              Humidity: <strong class="humidWind" id="humidity"></strong>, wind:
+              <strong class="humidWind" id="wind-speed"></strong>
             </p>
           </div>
           <div class="temperature-container">
             <div class="weather-icon">🌤</div>
-            <div class="degrees">12</div>
+            <div class="degrees" id="degrees">12</div>
             <div class="unit">°C</div>
           </div>
         </div>
@@ -45,5 +52,6 @@
         </p>
       </footer>
     </div>
+    <script src="app.js"></script>
   </body>
 </html>
